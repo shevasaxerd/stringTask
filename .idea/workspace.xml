@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="64c0c70e-c18b-4ee3-bea3-ce1b3f44e354" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MainService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/StringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/StringServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringServiceImpl.java" afterDir="false" />
@@ -27,6 +26,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="shevasaxerd &lt;shevasaxerd@gmail.com&gt;" />
         <option value="shevasaxerd@gmail.com" />
       </list>
     </option>
@@ -71,11 +71,20 @@
       <option name="project" value="LOCAL" />
       <updated>1724927325484</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add five methods whitout program loop">
+      <option name="closed" value="true" />
+      <created>1724933500041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724933500041</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add a structure and 1 method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a structure and 1 method" />
+    <MESSAGE value="Add five methods whitout program loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add five methods whitout program loop" />
   </component>
 </project>
