@@ -4,6 +4,14 @@ package services;
 import java.util.Scanner;
 
 public class StringServiceImpl implements StringService {
+
+    public InputData inputData;
+    public StringServiceImpl() {}
+    public StringServiceImpl(InputData inputData){
+        this.inputData = inputData;
+    }
+
+
     public void symbolByIndex (String line, int index){
         String[] arr = line.split("");
         System.out.println(index + " element on line: " +"'" + arr[index-1] + "'");
@@ -24,16 +32,14 @@ public class StringServiceImpl implements StringService {
 
     }
     public String addNewLine (String line){
-        Scanner scanner1 = new Scanner(System.in);
-        String str1;
-        String str2;
         System.out.println("Enter a new line to beginning of the string: ");
-        str1 = scanner1.nextLine();
+        String str1 = inputData.inputString();
 
-        Scanner scanner2 = new Scanner(System.in);
         System.out.println("Enter a new line to add to the end of the string: ");
-        str2 = scanner2.nextLine();
-        String str = str1  + line + str2;
+        String str2 = inputData.inputString();
+
+        String str = new StringBuilder(line).insert(0, str1).toString();
+        str = new StringBuilder(str).insert(str.length(), str2).toString();
         System.out.println(str);
         return str;
 

@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c0c70e-c18b-4ee3-bea3-ce1b3f44e354" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/services/InputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/InputDataImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Line.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/StringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/StringServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,13 +87,32 @@
       <option name="project" value="LOCAL" />
       <updated>1724939482648</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Remove class &quot;Line&quot;, change the type to String">
+      <option name="closed" value="true" />
+      <created>1725006784475</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725006784475</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add a structure and 1 method" />
     <MESSAGE value="Add five methods whitout program loop" />
     <MESSAGE value="Add 9 methods and looped algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add 9 methods and looped algorithm" />
+    <MESSAGE value="Remove class &quot;Line&quot;, change the type to String" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove class &quot;Line&quot;, change the type to String" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
