@@ -1,27 +1,29 @@
 package services;
-import models.Line;
+
 
 import java.util.Scanner;
 
 public class StringServiceImpl implements StringService {
-    public void symbolByIndex (Line line, int index){
-        String str = line.getLine();
-        String[] arr = str.split("");
+    public void symbolByIndex (String line, int index){
+        String[] arr = line.split("");
         System.out.println(index + " element on line: " +"'" + arr[index-1] + "'");
     }
-    public void splitBySpace (Line line){
-        String str = line.getLine();
-        for (int i = 0; i < str.length(); i++) {
-            System.out.print(str.charAt(i) + " ");
+    public String splitBySpace (String line){
+        String str ="";
+        for (int i = 0; i < line.length(); i++) {
+            System.out.print(line.charAt(i) + " ");
+            str = str + line.charAt(i) + " ";
         }
-        line.setLine(str);
+                return str;
+
     }
-    public void reverse (Line line){
-        String str = new StringBuilder(line.getLine()).reverse().toString();
+    public String reverse (String line){
+        String str = new StringBuilder(line).reverse().toString();
         System.out.println(str);
-        line.setLine(str);
+        return str;
+
     }
-    public void addNewLine (Line line){
+    public String addNewLine (String line){
         Scanner scanner1 = new Scanner(System.in);
         String str1;
         String str2;
@@ -31,41 +33,39 @@ public class StringServiceImpl implements StringService {
         Scanner scanner2 = new Scanner(System.in);
         System.out.println("Enter a new line to add to the end of the string: ");
         str2 = scanner2.nextLine();
-        String str = str1  + line.getLine() + str2;
+        String str = str1  + line + str2;
         System.out.println(str);
-        line.setLine(str);
+        return str;
+
     }
-    public void numberOfCharacters (Line line){
-        String str = line.getLine();
-        System.out.println(str.length());
+    public void numberOfCharacters (String line){
+        System.out.println(line.length());
     }
-    public void splitBySymbol (Line line){
+    public void splitBySymbol (String line){
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Enter a separator symbol: ");
         String symbol = scanner1.nextLine();
-        String str = line.getLine();
-        String[] arr = str.split(symbol);
+                String[] arr = line.split(symbol);
         for (int i = 0; i < arr.length; i++){
             System.out.println(arr[i]);
         }
 
     }
-    public void registerUp (Line line){
-        String str = line.getLine();
-        System.out.println(str.toUpperCase());
-        line.setLine(str.toUpperCase());
+    public String registerUp (String line){
+        System.out.println(line.toUpperCase());
+        return line.toUpperCase();
     }
-    public void registerDown (Line line){
-        String str = line.getLine();
-        System.out.println(str.toLowerCase());
-        line.setLine(str.toLowerCase());
+    public String registerDown (String line){
+        System.out.println(line.toLowerCase());
+        return line.toLowerCase();
     }
-    public void newLine(Line line){
+    public String newLine(){
         Scanner scanner1 = new Scanner(System.in);
-        String str1;
+        String str;
         System.out.println("Enter a new line: ");
-        str1 = scanner1.nextLine();
-        line.setLine(str1);
+        str = scanner1.nextLine();
+        return str;
+
     }
 
 

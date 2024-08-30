@@ -1,15 +1,13 @@
 package services;
 
-import models.Line;
-
 public interface StringService {
-    public void symbolByIndex (Line line, int index);
-    public void splitBySpace (Line line);
-    public void reverse (Line line);
-    public void addNewLine (Line line);
-    public void numberOfCharacters (Line line);
-    public void splitBySymbol (Line line);
-    public void registerUp (Line line);
-    public void registerDown (Line line);
-    public void newLine(Line line);
+    public void symbolByIndex (String line, int index);
+    public String splitBySpace (String line);
+    public String reverse (String line);
+    public String addNewLine (String line);
+    public void numberOfCharacters (String line);
+    public void splitBySymbol (String line);
+    public String registerUp (String line);
+    public String registerDown (String line);
+    public String newLine();
 }

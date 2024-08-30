@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="64c0c70e-c18b-4ee3-bea3-ce1b3f44e354" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Line.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MainService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/StringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/StringServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringServiceImpl.java" afterDir="false" />
@@ -35,25 +36,25 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2lKI5jAdQDrSMDWUHH9eCfbSFJm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Sheva.GRANITNT/IdeaProjects/matrix",
-    "onboarding.tips.debug.path": "C:/Users/Sheva.GRANITNT/IdeaProjects/TaskAboutString/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sheva.GRANITNT/IdeaProjects/matrix&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Sheva.GRANITNT/IdeaProjects/TaskAboutString/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,12 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1724933500041</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add 9 methods and looped algorithm">
+      <option name="closed" value="true" />
+      <created>1724939482648</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724939482648</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add a structure and 1 method" />
     <MESSAGE value="Add five methods whitout program loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add five methods whitout program loop" />
+    <MESSAGE value="Add 9 methods and looped algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 9 methods and looped algorithm" />
   </component>
 </project>

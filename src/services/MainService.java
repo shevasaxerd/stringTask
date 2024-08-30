@@ -1,5 +1,4 @@
 package services;
-import models.Line;
 import java.util.Scanner;
 
 public class MainService {
@@ -11,10 +10,10 @@ public class MainService {
 
     public void start() {
 
-        Line line = new Line();
+        String line;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a line: ");
-        line.setLine(scanner.nextLine());
+        line = scanner.nextLine();
 
         int check = 1;
         while (check != 13) {
@@ -42,13 +41,13 @@ public class MainService {
                 stringService.symbolByIndex(line, index);
             }
             if (choise == 2) {
-                stringService.splitBySpace(line);
+                line = stringService.splitBySpace(line);
             }
             if (choise == 3) {
-                stringService.reverse(line);
+               line = stringService.reverse(line);
             }
             if (choise == 4) {
-                stringService.addNewLine(line);
+               line = stringService.addNewLine(line);
             }
             if (choise == 5) {
                 stringService.numberOfCharacters(line);
@@ -57,10 +56,10 @@ public class MainService {
                 stringService.splitBySymbol(line);
             }
             if (choise == 7) {
-                stringService.registerUp(line);
+                line = stringService.registerUp(line);
             }
             if (choise == 8) {
-                stringService.registerDown(line);
+               line = stringService.registerDown(line);
             }
             if (choise == 9){
 
@@ -72,7 +71,7 @@ public class MainService {
 
             }
             if (choise == 12){
-                stringService.newLine(line);
+                line = stringService.newLine();
             }
 
         }
