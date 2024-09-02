@@ -15,11 +15,8 @@ public class MainService {
     }
 
     public void start() {
-
-        String line;
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a line: ");
-        line = scanner.nextLine();
+        String line = inputDataService.inputString();
 
         int check = 1;
         while (check != 13) {
@@ -38,45 +35,45 @@ public class MainService {
                     "12. Enter a NEW line\n" +
                     "13. EXIT");
 
-            int choise = scanner.nextInt();
-            check = choise;
+            int choice = inputDataService.inputInt();
+            check = choice;
 
-            if (choise == 1) {
+            if (choice == 1) {
                 System.out.println("Enter a number of symbol: ");
-                int index = scanner.nextInt();
+                int index = inputDataService.inputInt();
                 stringService.symbolByIndex(line, index);
             }
-            if (choise == 2) {
+            if (choice == 2) {
                 line = stringService.splitBySpace(line);
             }
-            if (choise == 3) {
+            if (choice == 3) {
                line = stringService.reverse(line);
             }
-            if (choise == 4) {
+            if (choice == 4) {
                line = stringService.addNewLine(line);
             }
-            if (choise == 5) {
+            if (choice == 5) {
                 stringService.numberOfCharacters(line);
             }
-            if (choise == 6) {
+            if (choice == 6) {
                 stringService.splitBySymbol(line);
             }
-            if (choise == 7) {
+            if (choice == 7) {
                 line = stringService.registerUp(line);
             }
-            if (choise == 8) {
+            if (choice == 8) {
                line = stringService.registerDown(line);
             }
-            if (choise == 9){
+            if (choice == 9){
 
             }
-            if (choise == 10){
+            if (choice == 10){
 
             }
-            if (choise == 11){
+            if (choice == 11){
 
             }
-            if (choise == 12){
+            if (choice == 12){
                 line = stringService.newLine();
             }
 

@@ -9,6 +9,7 @@ public class InputDataServiceImpl implements InputDataService {
     }
 
     public int inputInt() {
-        return 0;
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
     }
 }

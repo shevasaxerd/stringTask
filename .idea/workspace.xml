@@ -7,8 +7,7 @@
     <list default="true" id="64c0c70e-c18b-4ee3-bea3-ce1b3f44e354" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/InputDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/InputDataImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/InputDataServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/InputDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/InputDataServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MainService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/StringServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringServiceImpl.java" afterDir="false" />
     </list>
@@ -105,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725015478134</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add service InputData (not worked, nullPointerException) #2">
+      <option name="closed" value="true" />
+      <created>1725262286999</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725262286999</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -114,7 +121,8 @@
     <MESSAGE value="Add 9 methods and looped algorithm" />
     <MESSAGE value="Remove class &quot;Line&quot;, change the type to String" />
     <MESSAGE value="Add service InputData (not worked, nullPointerException)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add service InputData (not worked, nullPointerException)" />
+    <MESSAGE value="Add service InputData (not worked, nullPointerException) #2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add service InputData (not worked, nullPointerException) #2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

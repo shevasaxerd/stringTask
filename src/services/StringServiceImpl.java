@@ -51,9 +51,9 @@ public class StringServiceImpl implements StringService {
         System.out.println(line.length());
     }
     public void splitBySymbol (String line){
-        Scanner scanner1 = new Scanner(System.in);
+
         System.out.println("Enter a separator symbol: ");
-        String symbol = scanner1.nextLine();
+        String symbol = inputDataService.inputString();
                 String[] arr = line.split(symbol);
         for (int i = 0; i < arr.length; i++){
             System.out.println(arr[i]);
@@ -69,11 +69,8 @@ public class StringServiceImpl implements StringService {
         return line.toLowerCase();
     }
     public String newLine(){
-        Scanner scanner1 = new Scanner(System.in);
-        String str;
         System.out.println("Enter a new line: ");
-        str = scanner1.nextLine();
-        return str;
+        return inputDataService.inputString();
 
     }
 

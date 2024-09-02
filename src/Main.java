@@ -5,8 +5,8 @@ import services.StringServiceImpl;
 public class Main {
     public static void main(String[] args) {
 
-        StringServiceImpl stringServiceImpl = new StringServiceImpl();
         InputDataServiceImpl inputDataServiceImpl = new InputDataServiceImpl();
+        StringServiceImpl stringServiceImpl = new StringServiceImpl(inputDataServiceImpl);
         MainService mainService = new MainService(stringServiceImpl, inputDataServiceImpl);
         mainService.start();
 
