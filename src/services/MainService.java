@@ -3,9 +3,15 @@ import java.util.Scanner;
 
 public class MainService {
     private StringService stringService;
+    private InputDataService inputDataService;
     public MainService(){}
     public MainService(StringService stringService){
         this.stringService = stringService;
+    }
+
+    public MainService(StringService stringService, InputDataService inputDataService) {
+        this.stringService = stringService;
+        this.inputDataService = inputDataService;
     }
 
     public void start() {

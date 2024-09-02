@@ -5,10 +5,11 @@ import java.util.Scanner;
 
 public class StringServiceImpl implements StringService {
 
-    public InputData inputData;
+    public InputDataService inputDataService;
     public StringServiceImpl() {}
-    public StringServiceImpl(InputData inputData){
-        this.inputData = inputData;
+    public StringServiceImpl(InputDataService inputDataService){
+        this.inputDataService = inputDataService;
+
     }
 
 
@@ -32,11 +33,13 @@ public class StringServiceImpl implements StringService {
 
     }
     public String addNewLine (String line){
+        String str1;
         System.out.println("Enter a new line to beginning of the string: ");
-        String str1 = inputData.inputString();
+        str1 = inputDataService.inputString();
 
+        String str2 = "";
         System.out.println("Enter a new line to add to the end of the string: ");
-        String str2 = inputData.inputString();
+        str2 = inputDataService.inputString();
 
         String str = new StringBuilder(line).insert(0, str1).toString();
         str = new StringBuilder(str).insert(str.length(), str2).toString();

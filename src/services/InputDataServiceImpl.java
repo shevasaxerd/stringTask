@@ -2,7 +2,7 @@ package services;
 
 import java.util.Scanner;
 
-public class InputDataImpl implements InputData{
+public class InputDataServiceImpl implements InputDataService {
     public String inputString(){
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
