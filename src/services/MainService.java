@@ -20,8 +20,8 @@ public class MainService {
 
         int check = 1;
         while (check != 13) {
-            System.out.println("What do you want to do?");
-            System.out.println("1. output a string character by its index\n" +
+            System.out.println("What do you want to do?\n" +
+                    "1. output a string character by its index\n" +
                     "2. output all characters of a string separated by a space\n" +
                     "3. expand a string\n" +
                     "4. add a new line to a string from the end and from the beginning\n" +
@@ -29,9 +29,9 @@ public class MainService {
                     "6. turn a string into an array of strings separated by the character entered by the user\n" +
                     "7. convert the entire string to upper case\n" +
                     "8. convert the entire string to lower case\n" +
-                    "9. roll back changes one step back\n" +
-                    "10. add the ability to save a string and the history of operations with it to a file in the format (date and time of the operation: name of the operation: value of the string before the operation: value of the string after the operation)\n" +
-                    "11. output strings in the format (4 characters “space”4 characters “new line”)\n " +
+                    "9. output strings in the format (4 characters “space”4 characters “new line”)\n" +
+                    "10. save a string and the history of operations to a file\n" +
+                    "11. roll back changes one step back\n " +
                     "12. Enter a NEW line\n" +
                     "13. EXIT");
 
@@ -44,7 +44,7 @@ public class MainService {
                 stringService.symbolByIndex(line, index);
             }
             if (choice == 2) {
-                line = stringService.splitBySpace(line);
+                stringService.splitBySpace(line);
             }
             if (choice == 3) {
                line = stringService.reverse(line);
@@ -56,7 +56,7 @@ public class MainService {
                 stringService.numberOfCharacters(line);
             }
             if (choice == 6) {
-                stringService.splitBySymbol(line);
+                line = stringService.splitBySymbol(line);
             }
             if (choice == 7) {
                 line = stringService.registerUp(line);
@@ -65,7 +65,7 @@ public class MainService {
                line = stringService.registerDown(line);
             }
             if (choice == 9){
-
+                line = stringService.newFormat(line);
             }
             if (choice == 10){
 
