@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c0c70e-c18b-4ee3-bea3-ce1b3f44e354" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/models/HistoryList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MainService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/StringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringService.java" afterDir="false" />
@@ -119,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725266186737</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add service to split string by user symbol and to output string in format: &#10;**** ****&#10;**** ****">
+      <option name="closed" value="true" />
+      <created>1725354466232</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725354466232</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -130,7 +139,9 @@
     <MESSAGE value="Add service InputData (not worked, nullPointerException)" />
     <MESSAGE value="Add service InputData (not worked, nullPointerException) #2" />
     <MESSAGE value="Add service InputData (fixed problems)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add service InputData (fixed problems)" />
+    <MESSAGE value="Add service to split string by user symbol and to output string in format **** ****" />
+    <MESSAGE value="Add service to split string by user symbol and to output string in format: &#10;**** ****&#10;**** ****" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add service to split string by user symbol and to output string in format: &#10;**** ****&#10;**** ****" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

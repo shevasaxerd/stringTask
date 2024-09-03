@@ -1,5 +1,7 @@
 package services;
 
+import models.HistoryList;
+
 public interface StringService {
     public void symbolByIndex (String line, int index);
     public void splitBySpace (String line);
@@ -11,4 +13,5 @@ public interface StringService {
     public String registerDown (String line);
     public String newLine();
     public String newFormat(String line);
+    public String oneStepBack (String line, HistoryList historyList);
 }

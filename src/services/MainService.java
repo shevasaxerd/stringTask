@@ -1,4 +1,7 @@
 package services;
+import models.HistoryList;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainService {
@@ -17,6 +20,9 @@ public class MainService {
     public void start() {
         System.out.println("Enter a line: ");
         String line = inputDataService.inputString();
+
+        HistoryList historyList = new HistoryList();
+        historyList.addString(line);
 
         int check = 1;
         while (check != 13) {
@@ -48,33 +54,40 @@ public class MainService {
             }
             if (choice == 3) {
                line = stringService.reverse(line);
+               historyList.addString(line);
             }
             if (choice == 4) {
                line = stringService.addNewLine(line);
+                historyList.addString(line);
             }
             if (choice == 5) {
                 stringService.numberOfCharacters(line);
             }
             if (choice == 6) {
                 line = stringService.splitBySymbol(line);
+                historyList.addString(line);
             }
             if (choice == 7) {
                 line = stringService.registerUp(line);
+                historyList.addString(line);
             }
             if (choice == 8) {
                line = stringService.registerDown(line);
+                historyList.addString(line);
             }
             if (choice == 9){
                 line = stringService.newFormat(line);
+                historyList.addString(line);
             }
             if (choice == 10){
 
             }
             if (choice == 11){
-
+                line = stringService.oneStepBack(line, historyList);
             }
             if (choice == 12){
                 line = stringService.newLine();
+                historyList.addString(line);
             }
 
         }

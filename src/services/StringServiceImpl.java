@@ -1,5 +1,5 @@
 package services;
-
+import models.HistoryList;
 
 import java.util.Scanner;
 
@@ -11,6 +11,7 @@ public class StringServiceImpl implements StringService {
         this.inputDataService = inputDataService;
 
     }
+
 
 
     public void symbolByIndex (String line, int index){
@@ -95,5 +96,9 @@ public class StringServiceImpl implements StringService {
         System.out.println(str1);
         return str1.toString();
     }
+    public String oneStepBack(String line, HistoryList historyList) {
+        //historyList.printHistoryList();
+        return historyList.removeString();
 
+    }
 }
