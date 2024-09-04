@@ -31,9 +31,20 @@ public class HistoryList {
         return index;
     }
 
-    public void addString(String newString){
+    public void addString(String newString, HistoryList historyList){
+       if (index < string.length){
        string[index] = newString;
-       index++;
+       index++; }
+       else {
+           String[] string1 = new String[index];
+           for (int i = 0; i < string.length; i++){
+               string1[i] = string[i];
+           }
+           string = new String[index+10];
+           for (int i = 0; i < string1.length; i++){
+               string[i] = string1[i];
+           }
+       }
     }
 
     public String removeString(){

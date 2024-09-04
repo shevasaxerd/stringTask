@@ -2,6 +2,7 @@ package services;
 import models.HistoryList;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainService {
@@ -22,7 +23,7 @@ public class MainService {
         String line = inputDataService.inputString();
 
         HistoryList historyList = new HistoryList();
-        historyList.addString(line);
+        historyList.addString(line, historyList);
 
         int check = 1;
         while (check != 13) {
@@ -41,55 +42,68 @@ public class MainService {
                     "12. Enter a NEW line\n" +
                     "13. EXIT");
 
-            int choice = inputDataService.inputInt();
-            check = choice;
 
-            if (choice == 1) {
-                System.out.println("Enter a number of symbol: ");
-                int index = inputDataService.inputInt();
-                stringService.symbolByIndex(line, index);
-            }
-            if (choice == 2) {
-                stringService.splitBySpace(line);
-            }
-            if (choice == 3) {
-               line = stringService.reverse(line);
-               historyList.addString(line);
-            }
-            if (choice == 4) {
-               line = stringService.addNewLine(line);
-                historyList.addString(line);
-            }
-            if (choice == 5) {
-                stringService.numberOfCharacters(line);
-            }
-            if (choice == 6) {
-                line = stringService.splitBySymbol(line);
-                historyList.addString(line);
-            }
-            if (choice == 7) {
-                line = stringService.registerUp(line);
-                historyList.addString(line);
-            }
-            if (choice == 8) {
-               line = stringService.registerDown(line);
-                historyList.addString(line);
-            }
-            if (choice == 9){
-                line = stringService.newFormat(line);
-                historyList.addString(line);
-            }
-            if (choice == 10){
+                try {
+                    int choice = inputDataService.inputInt();
+                    check = choice;
 
-            }
-            if (choice == 11){
-                line = stringService.oneStepBack(line, historyList);
-            }
-            if (choice == 12){
-                line = stringService.newLine();
-                historyList.addString(line);
-            }
+                    if (choice == 1) {
+                        System.out.println("Enter a number of symbol: ");
+                        int index = inputDataService.inputInt();
+                        if (index > line.length()){
+                            System.out.println("String is shortly!");
+                        }
+                       else {stringService.symbolByIndex(line, index);}
+                    }
+                    else if (choice == 2) {
+                        stringService.splitBySpace(line);
+                    }
+                    else if (choice == 3) {
+                        line = stringService.reverse(line);
+                        historyList.addString(line, historyList);
+                    }
+                    else if (choice == 4) {
+                        line = stringService.addNewLine(line);
+                        historyList.addString(line, historyList);
+                    }
+                    else if (choice == 5) {
+                        stringService.numberOfCharacters(line);
+                    }
+                    else if (choice == 6) {
+                        line = stringService.splitBySymbol(line);
+                        historyList.addString(line, historyList );
+                    }
+                    else if (choice == 7) {
+                        line = stringService.registerUp(line);
+                        historyList.addString(line, historyList);
+                    }
+                    else if (choice == 8) {
+                        line = stringService.registerDown(line);
+                        historyList.addString(line, historyList);
+                    }
+                    else if (choice == 9) {
+                        line = stringService.newFormat(line);
+                        historyList.addString(line, historyList);
+                    }
+                    else if (choice == 10) {
 
+                    }
+                    else if (choice == 11) {
+                        line = stringService.oneStepBack(line, historyList);
+                    }
+                    else if (choice == 12) {
+                        line = stringService.newLine();
+                        historyList.addString(line, historyList);
+                    }
+                    else if (choice == 14) {
+                        historyList.printHistoryList();
+                    }
+                        else {
+                        System.out.println("Wrong choice!");
+                    }
+
+                } catch (InputMismatchException e){System.out.println("Wrong choice!!");}
+                   catch (ArrayIndexOutOfBoundsException e) {System.out.println("Wrong choice!!!");}
         }
     }
 

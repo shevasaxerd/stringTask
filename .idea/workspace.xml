@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c0c70e-c18b-4ee3-bea3-ce1b3f44e354" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/HistoryList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/HistoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/HistoryList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/StringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/StringServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725354466232</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add service to back to one step">
+      <option name="closed" value="true" />
+      <created>1725372470907</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725372470908</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -141,7 +147,8 @@
     <MESSAGE value="Add service InputData (fixed problems)" />
     <MESSAGE value="Add service to split string by user symbol and to output string in format **** ****" />
     <MESSAGE value="Add service to split string by user symbol and to output string in format: &#10;**** ****&#10;**** ****" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add service to split string by user symbol and to output string in format: &#10;**** ****&#10;**** ****" />
+    <MESSAGE value="Add service to back to one step" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add service to back to one step" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
