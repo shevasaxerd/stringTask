@@ -1,6 +1,8 @@
 package services;
 import models.HistoryList;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -23,6 +25,9 @@ public class MainService {
         String line = inputDataService.inputString();
 
         HistoryList historyList = new HistoryList();
+
+
+        String historyFile = "Format: TIME | operation name | string before | string after\n";
         historyList.addString(line, historyList);
 
         int check = 1;
@@ -59,40 +64,72 @@ public class MainService {
                         stringService.splitBySpace(line);
                     }
                     else if (choice == 3) {
+                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
+                        historyFile = historyFile + "{" + currentDateTime + "| EXPAND | " + line + " | ";
                         line = stringService.reverse(line);
+                        historyFile = historyFile + line + "}" + " \n";
                         historyList.addString(line, historyList);
                     }
                     else if (choice == 4) {
+                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
+                        historyFile = historyFile + "{" + currentDateTime + "| ADD TO THE END AND TO THE BEGINNING | " + line + " | ";
                         line = stringService.addNewLine(line);
+                        historyFile = historyFile + line + "}" + " \n";
                         historyList.addString(line, historyList);
                     }
                     else if (choice == 5) {
                         stringService.numberOfCharacters(line);
                     }
                     else if (choice == 6) {
+                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
+                        historyFile = historyFile + "{" + currentDateTime + "| SEPARATE BY USER SIMBOL | " + line + " | ";
                         line = stringService.splitBySymbol(line);
+                        historyFile = historyFile + line + "}" + " \n";
                         historyList.addString(line, historyList );
                     }
                     else if (choice == 7) {
+                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
+                        historyFile = historyFile + "{" + currentDateTime + "| CONVERT TO UPPER CASE | " + line + " | ";
                         line = stringService.registerUp(line);
+                        historyFile = historyFile + line + "}" + " \n";
                         historyList.addString(line, historyList);
                     }
                     else if (choice == 8) {
+                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
+                        historyFile = historyFile + "{" + currentDateTime + "| CONVERT TO LOWER CASE | " + line + " | ";
                         line = stringService.registerDown(line);
+                        historyFile = historyFile + line + "}" + " \n";
                         historyList.addString(line, historyList);
                     }
                     else if (choice == 9) {
+                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
+                        historyFile = historyFile + "{" + currentDateTime + "| CHANGE FORMAT | " + line + " | ";
                         line = stringService.newFormat(line);
+                        historyFile = historyFile + line + "}" + " \n";
                         historyList.addString(line, historyList);
                     }
                     else if (choice == 10) {
-
+                        try {
+                            FileWriter writer = new FileWriter("historyOfString.txt", false);
+                            writer.write(historyFile);
+                            writer.close();
+                            System.out.println("Writing to the file is successful");
+                        } catch (IOException e) {
+                            System.out.println("Error writing to file!");
+                            e.printStackTrace();
+                        }
                     }
                     else if (choice == 11) {
+                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
+                        historyFile = historyFile + "{" + currentDateTime + "| ONE STEP BACK | " + line + " | ";
                         line = stringService.oneStepBack(line, historyList);
+                        historyFile = historyFile + line + "}" + " \n";
                     }
                     else if (choice == 12) {
+                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
+                        historyFile = historyFile + "{" + currentDateTime + "| INPUT NEW LINE | " + line + " | ";
                         line = stringService.newLine();
+                        historyFile = historyFile + line + "}" + " \n";
                         historyList.addString(line, historyList);
                     }
                     else if (choice == 14) {

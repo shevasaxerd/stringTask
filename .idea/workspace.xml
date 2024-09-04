@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="64c0c70e-c18b-4ee3-bea3-ce1b3f44e354" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/HistoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/HistoryList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MainService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725372470908</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add exception handling to the program loop">
+      <option name="closed" value="true" />
+      <created>1725446314114</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725446314114</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -148,7 +155,8 @@
     <MESSAGE value="Add service to split string by user symbol and to output string in format **** ****" />
     <MESSAGE value="Add service to split string by user symbol and to output string in format: &#10;**** ****&#10;**** ****" />
     <MESSAGE value="Add service to back to one step" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add service to back to one step" />
+    <MESSAGE value="Add exception handling to the program loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add exception handling to the program loop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
