@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c0c70e-c18b-4ee3-bea3-ce1b3f44e354" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/models/HistoryInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/historyOfString.txt" beforeDir="false" afterPath="$PROJECT_DIR$/historyOfString.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/HistoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/HistoryList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MainService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/StringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/StringServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/StringServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,16 +47,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sheva.GRANITNT/IdeaProjects/matrix&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Sheva.GRANITNT/IdeaProjects/TaskAboutString/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Sheva.GRANITNT/IdeaProjects/matrix",
+    "onboarding.tips.debug.path": "C:/Users/Sheva.GRANITNT/IdeaProjects/TaskAboutString/src/Main.java"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -141,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725446314114</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add an option to write history of operations to the file">
+      <option name="closed" value="true" />
+      <created>1725452916252</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725452916252</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -156,7 +169,8 @@
     <MESSAGE value="Add service to split string by user symbol and to output string in format: &#10;**** ****&#10;**** ****" />
     <MESSAGE value="Add service to back to one step" />
     <MESSAGE value="Add exception handling to the program loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add exception handling to the program loop" />
+    <MESSAGE value="Add an option to write history of operations to the file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add an option to write history of operations to the file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

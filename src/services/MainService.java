@@ -1,4 +1,5 @@
 package services;
+import models.HistoryInformation;
 import models.HistoryList;
 
 import java.io.FileWriter;
@@ -27,11 +28,11 @@ public class MainService {
         HistoryList historyList = new HistoryList();
 
 
-        String historyFile = "Format: TIME | operation name | string before | string after\n";
-        historyList.addString(line, historyList);
+
+        //String historyFile = "Format: TIME | operation name | string before | string after\n";
 
         int check = 1;
-        while (check != 13) {
+        while (check != 15) {
             System.out.println("What do you want to do?\n" +
                     "1. output a string character by its index\n" +
                     "2. output all characters of a string separated by a space\n" +
@@ -43,9 +44,11 @@ public class MainService {
                     "8. convert the entire string to lower case\n" +
                     "9. output strings in the format (4 characters “space”4 characters “new line”)\n" +
                     "10. save a string and the history of operations to a file\n" +
-                    "11. roll back changes one step back\n " +
-                    "12. Enter a NEW line\n" +
-                    "13. EXIT");
+                    "11. step back\n " +
+                    "12. step forward\n" +
+                    "13. Enter a NEW line\n" +
+                    "14. print the history of operations\n" +
+                    "15. EXIT");
 
 
                 try {
@@ -64,73 +67,85 @@ public class MainService {
                         stringService.splitBySpace(line);
                     }
                     else if (choice == 3) {
-                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
-                        historyFile = historyFile + "{" + currentDateTime + "| EXPAND | " + line + " | ";
+                        HistoryInformation historyInformation = new HistoryInformation();
+                        historyInformation.setDateTimeOperation(java.time.LocalDateTime.now());
+                        historyInformation.setOperationName("EXPAND");
+                        historyInformation.setOldString(line);
                         line = stringService.reverse(line);
-                        historyFile = historyFile + line + "}" + " \n";
-                        historyList.addString(line, historyList);
+                        historyInformation.setNewString(line);
+
+                        historyList.addString(historyInformation);
                     }
                     else if (choice == 4) {
-                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
-                        historyFile = historyFile + "{" + currentDateTime + "| ADD TO THE END AND TO THE BEGINNING | " + line + " | ";
+                        HistoryInformation historyInformation = new HistoryInformation();
+                        historyInformation.setDateTimeOperation(java.time.LocalDateTime.now());
+                        historyInformation.setOperationName("ADD TO THE END AND TO THE BEGINNING");
+                        historyInformation.setOldString(line);
                         line = stringService.addNewLine(line);
-                        historyFile = historyFile + line + "}" + " \n";
-                        historyList.addString(line, historyList);
+                        historyInformation.setNewString(line);
+
+                        historyList.addString(historyInformation);
                     }
                     else if (choice == 5) {
                         stringService.numberOfCharacters(line);
                     }
                     else if (choice == 6) {
-                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
-                        historyFile = historyFile + "{" + currentDateTime + "| SEPARATE BY USER SIMBOL | " + line + " | ";
+                        HistoryInformation historyInformation = new HistoryInformation();
+                        historyInformation.setDateTimeOperation(java.time.LocalDateTime.now());
+                        historyInformation.setOperationName("SEPARATE BY USER SYMBOL");
+                        historyInformation.setOldString(line);
                         line = stringService.splitBySymbol(line);
-                        historyFile = historyFile + line + "}" + " \n";
-                        historyList.addString(line, historyList );
+                        historyInformation.setNewString(line);
+
+                        historyList.addString(historyInformation);
                     }
                     else if (choice == 7) {
-                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
-                        historyFile = historyFile + "{" + currentDateTime + "| CONVERT TO UPPER CASE | " + line + " | ";
+                        HistoryInformation historyInformation = new HistoryInformation();
+                        historyInformation.setDateTimeOperation(java.time.LocalDateTime.now());
+                        historyInformation.setOperationName("CONVERT TO UPPER CASE");
+                        historyInformation.setOldString(line);
                         line = stringService.registerUp(line);
-                        historyFile = historyFile + line + "}" + " \n";
-                        historyList.addString(line, historyList);
+                        historyInformation.setNewString(line);
+
+                        historyList.addString(historyInformation);
                     }
                     else if (choice == 8) {
-                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
-                        historyFile = historyFile + "{" + currentDateTime + "| CONVERT TO LOWER CASE | " + line + " | ";
+                        HistoryInformation historyInformation = new HistoryInformation();
+                        historyInformation.setDateTimeOperation(java.time.LocalDateTime.now());
+                        historyInformation.setOperationName("CONVERT TO LOWER CASE");
+                        historyInformation.setOldString(line);
                         line = stringService.registerDown(line);
-                        historyFile = historyFile + line + "}" + " \n";
-                        historyList.addString(line, historyList);
+                        historyInformation.setNewString(line);
+
+                        historyList.addString(historyInformation);
                     }
                     else if (choice == 9) {
-                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
-                        historyFile = historyFile + "{" + currentDateTime + "| CHANGE FORMAT | " + line + " | ";
+                        HistoryInformation historyInformation = new HistoryInformation();
+                        historyInformation.setDateTimeOperation(java.time.LocalDateTime.now());
+                        historyInformation.setOperationName("CHANGE FORMAT");
+                        historyInformation.setOldString(line);
                         line = stringService.newFormat(line);
-                        historyFile = historyFile + line + "}" + " \n";
-                        historyList.addString(line, historyList);
+                        historyInformation.setNewString(line);
+
+                        historyList.addString(historyInformation);
                     }
                     else if (choice == 10) {
-                        try {
-                            FileWriter writer = new FileWriter("historyOfString.txt", false);
-                            writer.write(historyFile);
-                            writer.close();
-                            System.out.println("Writing to the file is successful");
-                        } catch (IOException e) {
-                            System.out.println("Error writing to file!");
-                            e.printStackTrace();
-                        }
-                    }
+                        historyList.addToFile();}
                     else if (choice == 11) {
-                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
-                        historyFile = historyFile + "{" + currentDateTime + "| ONE STEP BACK | " + line + " | ";
                         line = stringService.oneStepBack(line, historyList);
-                        historyFile = historyFile + line + "}" + " \n";
                     }
                     else if (choice == 12) {
-                        java.time.LocalDateTime currentDateTime = java.time.LocalDateTime.now();
-                        historyFile = historyFile + "{" + currentDateTime + "| INPUT NEW LINE | " + line + " | ";
+                        line = stringService.oneStepForward(line, historyList);
+                    }
+                    else if (choice == 13) {
+                        HistoryInformation historyInformation = new HistoryInformation();
+                        historyInformation.setDateTimeOperation(java.time.LocalDateTime.now());
+                        historyInformation.setOperationName("INPUT NEW LINE");
+                        historyInformation.setOldString(line);
                         line = stringService.newLine();
-                        historyFile = historyFile + line + "}" + " \n";
-                        historyList.addString(line, historyList);
+                        historyInformation.setNewString(line);
+
+                        historyList.addString(historyInformation);
                     }
                     else if (choice == 14) {
                         historyList.printHistoryList();
@@ -140,7 +155,7 @@ public class MainService {
                     }
 
                 } catch (InputMismatchException e){System.out.println("Wrong choice!!");}
-                   catch (ArrayIndexOutOfBoundsException e) {System.out.println("Wrong choice!!!");}
+                catch (NullPointerException | ArrayIndexOutOfBoundsException e) {System.out.println("You have gone beyond the acceptable limits!!!");}
         }
     }
 

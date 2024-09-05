@@ -14,4 +14,5 @@ public interface StringService {
     public String newLine();
     public String newFormat(String line);
     public String oneStepBack (String line, HistoryList historyList);
+    public String oneStepForward (String line, HistoryList historyList);
 }

@@ -1,4 +1,5 @@
 package services;
+import models.HistoryInformation;
 import models.HistoryList;
 
 import java.util.Scanner;
@@ -97,8 +98,17 @@ public class StringServiceImpl implements StringService {
         return str1.toString();
     }
     public String oneStepBack(String line, HistoryList historyList) {
-        //historyList.printHistoryList();
-        return historyList.removeString();
-
+        HistoryInformation[] arr = historyList.getInformation();
+        line = arr[historyList.getCurrent() - 1].getOldString();
+        historyList.setCurrent(historyList.getCurrent() - 1);
+        System.out.println(line);
+        return line;
+    }
+    public String oneStepForward(String line, HistoryList historyList){
+        HistoryInformation[] arr = historyList.getInformation();
+        line = arr[historyList.getCurrent() + 1].getOldString();
+        historyList.setCurrent(historyList.getCurrent() +1);
+        System.out.println(line);
+        return line;
     }
 }
